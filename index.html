@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drumming or Cumming?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Drumming <span>or</span> Cumming?</h1>
+      <div class="hud">
+        <div><small>Bild</small><b id="progress">1/10</b></div>
+        <div><small>Punkte</small><b id="score">0</b></div>
+        <div><small>Serie</small><b id="streak">0</b></div>
+        <div><small>Rekord</small><b id="best">0</b></div>
+      </div>
+    </header>
+
+    <section id="game">
+      <div class="stage" id="stage">
+        <img id="photo" alt="Rätselbild">
+        <div class="censor" id="censor"></div>
+        <div class="stamp" id="stamp"></div>
+      </div>
+
+      <div class="controls" id="choices">
+        <button class="btn drum" data-guess="drumming">🥁 Drumming <kbd>←</kbd></button>
+        <button class="btn cum" data-guess="cumming">💦 Cumming <kbd>→</kbd></button>
+      </div>
+      <div class="controls hidden" id="after">
+        <p id="verdict"></p>
+        <button class="btn next" id="next">Weiter <kbd>Enter</kbd></button>
+      </div>
+    </section>
+
+    <section id="result" class="hidden">
+      <h2 id="result-score"></h2>
+      <p id="result-text"></p>
+      <div class="controls">
+        <button class="btn next" id="restart">Nochmal</button>
+        <button class="btn" id="share">Ergebnis teilen</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
